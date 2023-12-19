@@ -8,14 +8,7 @@ My model is based on DenseNet121, allowing trainablity on some of its layers. To
 The model tested an accuracy of 84% 
 (Training was performed on a Macbook pro M3 GPU).  
 
-You can download the model in the repository and load it in your notebook to test it out:
 
-```python
-from keras.models import load_model
-
-model = load_model('model.h5')
-loss, accuracy = best_model.evaluate(test)
-```
 
 <br>
 
