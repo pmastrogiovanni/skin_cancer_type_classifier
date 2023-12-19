@@ -27,6 +27,7 @@ To access full code, refer to the jupyter notebook in the repository.
 The dataset is composed of rouglhy 10.000 images of skin lesions, with an highly unbalanced distribution between classes, as highlighted by the plot:  
 
 
+![image](https://github.com/pmastrogiovanni/skin_cancer_type_classifier/assets/98032774/41140d57-9766-477a-bdc1-874b2a6d1b4f)
 
 
 
