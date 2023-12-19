@@ -17,6 +17,7 @@ model = load_model('model.h5')
 loss, accuracy = best_model.evaluate(test)
 ```
 
+<br>
 
 # Detailed description
 Below you can find a detailed decription of each step of the project, including motivations and code snippets.
@@ -84,9 +85,11 @@ model.add(Dense(7, activation='softmax'))
 
 ### Training
 
-The model was trained using Adam as optimizer, with a learning rate of 0.001. To address overfitting, a learning scheduler with 0.9 as decay rate was employed.
+The model was trained using Adam as optimizer, with a learning rate of 0.001. To address overfitting, a learning scheduler with 0.7 as decay rate was employed.
 
 Best model was saved by using early stopping whenever the validation accuracy was not increasing for 3 epochs.
+
+
 
 
 ### Testing
