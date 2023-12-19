@@ -1,12 +1,12 @@
 # Summary
-I have built a multi-classifier on the HAM10000 dataset, which contains images of 7 types of skin cancer.
+I have built a multi-classifier on the HAM10000 dataset, which contains images of 7 types of skin cancer.  
 
-Due to the significant class imbalance, I applied data augmentation to the dataset.
+Due to the significant class imbalance, I applied data augmentation to the dataset.  
 
-My model is based on DenseNet121, allowing trainablity on some of its layers. To tackle overfitting, I reconstructed the top by incorporating multiple dropout layers.
+My model is based on DenseNet121, allowing trainablity on some of its layers. To tackle overfitting, I reconstructed the top by incorporating multiple dropout layers.  
 
 The model tested an accuracy of 85% 
-(Training was performed on a Macbook pro M3 GPU).
+(Training was performed on a Macbook pro M3 GPU).  
 
 You can download the model in the repository and load it in your notebook to test it out:
 
