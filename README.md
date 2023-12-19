@@ -6,7 +6,7 @@ The model tested an accuracy of 85%.
 
 You can download the model in the repository and load it in your notebook to test it out:
 
-```
+```python
 from keras.models import load_model
 
 model = load_model('model.h5')
