@@ -58,7 +58,7 @@ Dataset was split into 70% training, 20% validation and 10% test.
 
 
 ## The model
-As the dataset is relatively small, I decided to use a pre-trained model to allow for a better performance. As shown in the benchmark form ..., DenseNet121 is the pre-trained model that works better for this task. I allowed for retraining of the model layers except for the feature extraction layers, as they are used to detect low-level features in images. I have rebuilt the top of the model by introducing multiple dropout layers to address overfitting.
+As the dataset is relatively small, I decided to use the DenseNet121 pre-trained model to allow for a better performance. I allowed for retraining of the model layers except for the feature extraction layers, as they are used to detect low-level features in images. I have rebuilt the top of the model by introducing multiple dropout layers to address overfitting.
 
 ```python
 base_model = DenseNet121(weights='imagenet', include_top=False, input_shape=(256, 256, 3))
