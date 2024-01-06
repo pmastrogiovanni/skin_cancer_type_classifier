@@ -5,7 +5,7 @@ Due to the significant class imbalances, I applied data augmentation on the less
 
 My model is based on DenseNet121, allowing trainablity on some of its layers. To tackle overfitting, I reconstructed the top by incorporating multiple dropout layers.  
 
-The model tested an accuracy of 84% 
+The model tested an accuracy of 86% 
 
 
 <br>
