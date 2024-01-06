@@ -71,7 +71,9 @@ model.add(BatchNormalization())
 model.add(Dense(64, activation='relu'))
 model.add(Dropout(0.3))
 model.add(Dense(7, activation='softmax'))
+
 ```
+Inspired by: https://bouzouitina-hamdi.medium.com/transfer-learning-with-keras-using-densenet121-fffc6bb0c233
 
 ## Training
 
