@@ -1,13 +1,11 @@
 # Summary
 I have built a multi-classifier on the HAM10000 dataset, which contains images of 7 types of skin cancer.  
 
-Due to the significant class imbalances, I applied data augmentation to the dataset.  
+Due to the significant class imbalances, I applied data augmentation on the less represented classes of the dataset.  
 
 My model is based on DenseNet121, allowing trainablity on some of its layers. To tackle overfitting, I reconstructed the top by incorporating multiple dropout layers.  
 
 The model tested an accuracy of 84% 
-(Training was performed on a Macbook pro M3 GPU).  
-
 
 
 <br>
@@ -17,7 +15,7 @@ Below you can find a detailed decription of each step of the project, including 
 To access full code, refer to the jupyter notebook in the repository.
 
 ## Original data
-The dataset is composed of rouglhy 10.000 images of skin lesions, with an highly unbalanced distribution between classes, as highlighted by the plot:  
+The dataset is composed of roughly 10.000 images of skin lesions, with an highly unbalanced distribution between classes, as highlighted by the plot:  
 
 
 ![image](https://github.com/pmastrogiovanni/skin_cancer_type_classifier/assets/98032774/41140d57-9766-477a-bdc1-874b2a6d1b4f)
@@ -36,14 +34,14 @@ The applied modifications are:
 - Blur --> addition of random intensity of gaussian blur
 - Contrast --> random contrast between 0.4 (darker) and 1.4 (lighter)
 
-The augmentation is process is completely reproducible thanks to seeds.
+The augmentation process is completely reproducible thanks to seeds.
 
 
 ## Data Preparation
 To decrease memory consumption, dataset is pre-processed and loaded in batches of 32 images at each iteration.  
 
-Pre-process includes:
-- Resising to shape 256,256,3 (RGB channels).
+Pre-processing includes:
+- Resizing to shape 256,256,3 (RGB channels).
 - Rescaling values between 0 and 1.
 - Storing labels into one hot encoded vectors.
 
@@ -51,7 +49,7 @@ Dataset was split into 70% training, 20% validation and 10% test.
 
 
 ## The model
-As the dataset is relatively small, I decided to use the DenseNet121 pre-trained model to allow for a better performance. I allowed for retraining of the model layers except for the feature extraction layers, as they are used to detect low-level features in images. I have rebuilt the top of the model by introducing multiple dropout layers to address overfitting.
+As the dataset is relatively small, I decided to use the DenseNet121 pre-trained model to allow for a better performance. I allowed for retraining of the model layers (except feature extraction section, as they are used to detect low-level features in images). I have rebuilt the top of the model by introducing multiple dropout layers to address overfitting.
 
 ```python
 base_model = DenseNet121(weights='imagenet', include_top=False, input_shape=(256, 256, 3))
